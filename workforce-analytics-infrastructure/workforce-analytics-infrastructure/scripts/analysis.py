@@ -1,0 +1,41 @@
+import pandas as pd, matplotlib.pyplot as plt, seaborn as sns, numpy as np
+sns.set_style('whitegrid')
+PRIMARY="#1f77b4"; SECONDARY="#ff7f0e"; NEUTRAL="#7f7f7f"
+df = pd.read_csv('data/hires.csv', parse_dates=['posting_date','fill_date'])
+# 1 - time-to-fill trend by month (portfolio chart)
+df['month'] = df['fill_date'].apply(lambda x: pd.to_datetime(x).strftime('%b'))
+monthly = df.groupby('month')['time_to_fill_days'].mean().reindex(['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct'])
+plt.figure(figsize=(10,4))
+plt.plot(monthly.index, monthly.values, marker='o', color=PRIMARY)
+plt.title('Time-to-fill (days)')
+plt.ylabel('Days')
+plt.savefig('visuals/time_to_fill_trend.png', dpi=300, bbox_inches='tight')
+
+# 2 - hiring stage duration (simulated pre/post)
+stages = ['Posting to Review','Review to Interview','Interview to Offer','Offer to Accept']
+pre = [14,10,8,9]; post=[8,10,8,11]
+x = np.arange(len(stages))
+plt.figure(figsize=(8,4))
+plt.bar(x-0.15, pre, width=0.3, label='Pre-intervention', color=NEUTRAL)
+plt.bar(x+0.15, post, width=0.3, label='Post-intervention', color=SECONDARY)
+plt.xticks(x, stages, rotation=10)
+plt.title('Hiring stage duration (days)')
+plt.ylabel('Days')
+plt.legend()
+plt.savefig('visuals/hiring_stage_duration.png', dpi=300, bbox_inches='tight')
+
+# 3 - department time-to-fill boxplot (additional chart)
+plt.figure(figsize=(8,4))
+sns.boxplot(y='department', x='time_to_fill_days', data=df, palette='muted')
+plt.title('Time-to-fill by department')
+plt.xlabel('Days')
+plt.ylabel('')
+plt.savefig('visuals/time_to_fill_by_department.png', dpi=300, bbox_inches='tight')
+
+# 4 - hires count by department (additional chart)
+plt.figure(figsize=(6,4))
+dept_counts = df['department'].value_counts()
+dept_counts.plot(kind='bar', color=PRIMARY)
+plt.title('Hires by department (count)')
+plt.ylabel('Hires')
+plt.savefig('visuals/hires_by_department.png', dpi=300, bbox_inches='tight')
