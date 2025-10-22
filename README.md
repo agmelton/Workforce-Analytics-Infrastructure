@@ -32,7 +32,7 @@ Analyses were performed using Python (pandas, numpy, matplotlib, seaborn, scikit
 
 ### Time-to-fill improvement (days)
 
-<img src="workforce-analytics-infrastructure/workforce-analytics-infrastructure/visuals/hires_by_department.png" width="700" />
+<img src="workforce-analytics-infrastructure/workforce-analytics-infrastructure/visuals/time_to_fill_trend.png" width="700" />
 
 ### Hiring stage duration (days)
 
