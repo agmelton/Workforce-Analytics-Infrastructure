@@ -36,7 +36,7 @@ Analyses were performed using Python (pandas, numpy, matplotlib, seaborn, scikit
 
 ### Hiring stage duration (days)
 
-<img src="https://raw.githubusercontent.com/agmelton/workforce-analytics-infrastructure/visuals/hiring_stage_duration.png" alt="Hiring stage duration (days)" width="700" />
+<img src="workforce-analytics-infrastructure/workforce-analytics-infrastructure/visuals/hiring_stage_duration.png" width="700" />
 
 ### Time-to-fill by department
 
