@@ -32,11 +32,11 @@ Analyses were performed using Python (pandas, numpy, matplotlib, seaborn, scikit
 
 ### Time-to-fill improvement (days)
 
-<img src="https://raw.githubusercontent.com/agmelton/workforce-analytics-infrastructure/main/visuals/time_to_fill_trend.png" alt="Time-to-fill improvement (days)" width="700" />
+<img src="./visuals/time_to_fill_trend.png" alt="Time-to-fill improvement (days)" width="700" />
 
 ### Hiring stage duration (days)
 
-<img src="https://raw.githubusercontent.com/agmelton/workforce-analytics-infrastructure/main/visuals/hiring_stage_duration.png" alt="Hiring stage duration (days)" width="700" />
+<img src="https://raw.githubusercontent.com/agmelton/workforce-analytics-infrastructure/visuals/hiring_stage_duration.png" alt="Hiring stage duration (days)" width="700" />
 
 ### Time-to-fill by department
 
