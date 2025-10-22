@@ -25,7 +25,6 @@ plt.legend()
 plt.savefig('visuals/hiring_stage_duration.png', dpi=300, bbox_inches='tight')
 
 # 3 - department time-to-fill boxplot (additional chart)
-# === Time-to-fill Trend (realistic version) ===
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
