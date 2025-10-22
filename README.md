@@ -40,7 +40,7 @@ Analyses were performed using Python (pandas, numpy, matplotlib, seaborn, scikit
 
 ### Time-to-fill by department
 
-<img src="https://raw.githubusercontent.com/agmelton/workforce-analytics-infrastructure/main/visuals/time_to_fill_by_department.png" alt="Time-to-fill by department" width="700" />
+<img src="workforce-analytics-infrastructure/workforce-analytics-infrastructure/visuals/time_to_fill_by_department.png" width="700" />
 
 ### Hires by department (count)
 
