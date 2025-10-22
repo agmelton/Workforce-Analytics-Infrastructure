@@ -44,7 +44,7 @@ Analyses were performed using Python (pandas, numpy, matplotlib, seaborn, scikit
 
 ### Hires by department (count)
 
-<img src="https://raw.githubusercontent.com/agmelton/workforce-analytics-infrastructure/main/visuals/hires_by_department.png" alt="Hires by department (count)" width="700" />
+<img src="workforce-analytics-infrastructure/workforce-analytics-infrastructure/visuals/hires_by_department.png" width="700" />
 
 
 ## Recommendations
